@@ -47,6 +47,23 @@
         console.log(s1);
         s1.speak();
         s1.study();
+
+        class Car{
+            constructor(name,price){
+                this.name=name;
+                this.price=price;
+            }
+
+            //类中可以直接写赋值语句
+            //给Car的实例对象添加属性wheel  值为4
+            wheel=4;
+        }
+
+        const c1=new Car('奔驰',199);
+        const c2=new Car('宝马',199);
+        console.log(c1);
+        console.log(c2);
+
     </script>
 
 
