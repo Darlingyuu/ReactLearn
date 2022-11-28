@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>state</title>
+</head>
+<body>
+<!--准备好一个容器-->
+<div id="test"></div>
+
+
+<!--引入react核心库-->
+<script type="text/javascript" src="../js/react.development.js"></script>
+<!--引入react-dom,用于支持react操作DOM-->
+<script type="text/javascript" src="../js/react-dom.development.js"></script>
+<!--引入babel，用于将jsx转为js-->
+<script type="text/javascript" src="../js/babel.min.js"></script>
+
+
+<script type="text/babel">
+    //1.创建组件
+    class Weather extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {isHot: true};
+            //解决changeWeather中this指向问题
+            // this.changeWeather.bind(this)，将原型对象中的changeWeather绑定到实例this上
+            // this.changeWeather = ...    生成新方法changeWeather
+            this.changeWeather = this.changeWeather.bind(this);
+        }
+
+        //render调用几次——1+n次，1是初始化那次，n是状态更新的次数
+        render() {
+            // return <h1 id="title">今天天气很{this.state.isHot ? '炎热' : '凉爽'}</h1>
+            return <h1 onClick={this.changeWeather}>今天天气很{this.state.isHot ? '炎热' : '凉爽'}</h1>
+        }
+
+        //changeWeather调用几次——点几次调用几次
+        changeWeather() {
+            // 获取原来的isHot值
+            const isHot = this.state.isHot;
+            //严重注意：状态state不可直接更改
+            // this.state.isHot=!isHot;//错误
+
+            //严重注意：转态必须通过setState进行更新，且更新是一种合并，不是替换
+            this.setState({isHot: !isHot});
+            console.log(this.state.isHot);
+        }
+    }
+
+    ReactDOM.render(<Weather/>, document.getElementById("test"));
+
+
+</script>
+</body>
+</html>
