@@ -1,8 +1,6 @@
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
-!react_staging/01_脚手架自带文件/src/main/**
-!react_staging/01_脚手架自带文件/src/test/**
 
 ### STS ###
 .apt_generated
@@ -30,9 +28,5 @@ build/
 
 ### VS Code ###
 .vscode/
-.gitignore
-README.md
-package-lock.json
-package.json
-react_staging/01_脚手架自带文件/public/
-react_staging/01_脚手架自带文件/src/
+
+
