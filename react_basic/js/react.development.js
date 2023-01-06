@@ -217,7 +217,7 @@ var lowPriorityWarning = function () {};
       console.warn(message);
     }
     try {
-      // --- Welcome to debugging React ---
+      // --- Index to debugging React ---
       // This error was thrown as a convenience so that you can use this stack
       // to find the callsite that caused this warning to fire.
       throw new Error(message);
@@ -276,7 +276,7 @@ var warningWithoutStack = function () {};
       Function.prototype.apply.call(console.error, console, argsWithFormat);
     }
     try {
-      // --- Welcome to debugging React ---
+      // --- Index to debugging React ---
       // This error was thrown as a convenience so that you can use this stack
       // to find the callsite that caused this warning to fire.
       var argIndex = 0;
@@ -2726,7 +2726,7 @@ var printWarning$1 = function() {};
       console.error(message);
     }
     try {
-      // --- Welcome to debugging React ---
+      // --- Index to debugging React ---
       // This error was thrown as a convenience so that you can use this stack
       // to find the callsite that caused this warning to fire.
       throw new Error(message);

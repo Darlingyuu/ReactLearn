@@ -21,7 +21,7 @@ if ("development" !== 'production') {
       console.error(message);
     }
     try {
-      // --- Welcome to debugging React ---
+      // --- Index to debugging React ---
       // This error was thrown as a convenience so that you can use this stack
       // to find the callsite that caused this warning to fire.
       throw new Error(message);
@@ -194,7 +194,7 @@ if ("development" !== 'production') {
       console.error(message);
     }
     try {
-      // --- Welcome to debugging React ---
+      // --- Index to debugging React ---
       // This error was thrown as a convenience so that you can use this stack
       // to find the callsite that caused this warning to fire.
       throw new Error(message);
@@ -1149,7 +1149,7 @@ var lowPriorityWarning = function () {};
       console.warn(message);
     }
     try {
-      // --- Welcome to debugging React ---
+      // --- Index to debugging React ---
       // This error was thrown as a convenience so that you can use this stack
       // to find the callsite that caused this warning to fire.
       throw new Error(message);
