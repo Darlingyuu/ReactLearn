@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-//引入store
-import store from './redux/store'
-
 import Count from './containers/Count'
 
 export default class App extends Component {
